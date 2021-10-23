@@ -8,9 +8,14 @@ I'm Afonso, a Biomedical Engineer working as a database and data engineer.
 
 Please check some of my projects down below and feel free to contribute!
 
+### 📌 Pinned Repositories
+[![firefly-cli](https://github-readme-stats.vercel.app/api/pin/?username=afonsoc12&repo=firefly-cli&theme=dark)](https://github.com/afonsoc12/firefly-cli)
+[![intrusion-monitor](https://github-readme-stats.vercel.app/api/pin/?username=afonsoc12&repo=intrusion-monitor&theme=dark)](https://github.com/afonsoc12/firefly-cli)
+
 ### 📈 My GitHub stats
 
 [![stats](https://github-readme-stats.vercel.app/api?username=afonsoc12&show_icons=true&theme=dark)](https://github.com/afonsoc12)
+<!-- [![stats-lang](https://github-readme-stats.vercel.app/api/top-langs/?username=afonsoc12)](https://github.com/afonsoc12) -->
 
 <!--
 **afonsoc12/afonsoc12** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
