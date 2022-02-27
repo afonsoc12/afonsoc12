@@ -2,9 +2,9 @@
 
 [![GitHub Badge](https://img.shields.io/badge/GitHub-afonsoc12-informational?style=flat&logo=github&logoColor=white&color=gray&labelColor=333)](https://github.com/afonsoc12)
 [![Docker Hub Badge](https://img.shields.io/badge/Docker-afonsoc12-informational?style=flat&logo=docker&logoColor=white&color=gray&labelColor=0db7ed)](https://hub.docker.com/u/afonsoc12)
-[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-afonsoc12-informational?style=flat&logo=linkedin&logoColor=white&color=gray&labelColor=2867B2)](https://www.linkedin.com/in/afonsoc12/)
+<!-- [![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-afonsoc12-informational?style=flat&logo=linkedin&logoColor=white&color=gray&labelColor=2867B2)](https://www.linkedin.com/in/afonsoc12/) -->
 
-I'm Afonso, a Biomedical Engineer working as a database and data engineer.
+I'm Afonso, a Biomedical Engineer working as a data engineer.
 
 Please check some of my projects down below and feel free to contribute!
 
