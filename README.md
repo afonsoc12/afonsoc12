@@ -1,10 +1,12 @@
-## Hi there, nice to see you here 👋
+## Welcome 👋
 
-I'm Afonso, a 9-to-5 Data Engineer and 5-to-9 [homelab](https://www.reddit.com/r/homelab) enthusiast! I have a passion for all-things Open Source and technology in general (yes,a fully-fledged geek)!
+Hey there! I'm Afonso, a Data Engineer by day and an enthusiastic [homelabber](https://www.reddit.com/r/homelab) by night. I'm passionate for all-things Open-Source and Technology in general (yes, I'm proudly a fully-fledged geek)!
 
 ---
 
 ### Professional Tech Stack
+
+Here's a glimpse into the tech stack I wield:
 
 <div align="left">
   <img src="images/png/snowflake.png" width="30" />
@@ -23,7 +25,9 @@ I'm Afonso, a 9-to-5 Data Engineer and 5-to-9 [homelab](https://www.reddit.com/r
   <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/git.png" width="30" />
 </div>
 
-### Homelab
+### Homelab Playground
+
+In the Lab, I experiment with a variety of new technologies (mostly break the internet and get told off by the wife 😬):
 
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/kubernetes.png" width="30" />
@@ -44,6 +48,8 @@ I'm Afonso, a 9-to-5 Data Engineer and 5-to-9 [homelab](https://www.reddit.com/r
 </div>
 
 ### Self-Hosted OSS Services
+
+Here are some of the self-hosted services I use:
 
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/longhorn.png" width="30" />
@@ -70,6 +76,7 @@ I'm Afonso, a 9-to-5 Data Engineer and 5-to-9 [homelab](https://www.reddit.com/r
   <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/firefly.png" width="30" />
 </div>
 <div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/adguard-home.png" width="30" />
   <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/freshrss.png" width="30" />
   <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/gitea.png" width="30" />
   <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/wordpress.png" width="30" />
@@ -79,9 +86,9 @@ I'm Afonso, a 9-to-5 Data Engineer and 5-to-9 [homelab](https://www.reddit.com/r
   <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/wallabag.png" width="30" />
   <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/nextcloud.png" width="30" />
   <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/plex.png" width="30" />
-  <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/calibre.png" width="30" />
 </div>
 <div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/calibre.png" width="30" />
   <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/calibre-web.png" width="30" />
   <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/tautulli.png" width="30" />
   <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/overseerr.png" width="30" />
