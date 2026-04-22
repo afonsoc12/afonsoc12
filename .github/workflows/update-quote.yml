@@ -20,7 +20,6 @@ jobs:
         uses: actions/checkout@v6
 
       - name: 🌐 Fetch quote
-        id: quote
         run: |
           MAX_RETRIES=3
           RETRY_DELAY=30
@@ -59,26 +58,19 @@ jobs:
               continue
             fi
 
-            QUOTE=$(jq -rj '.[0].q | @uri' /tmp/quotes.json)
-            AUTHOR=$(jq -rj '.[0].a | @uri' /tmp/quotes.json)
-
             echo "💬 Quote: \"$QUOTE_TEXT\""
             echo "👤 Author: $AUTHOR_TEXT"
-            echo "quote=$QUOTE" >> "$GITHUB_OUTPUT"
-            echo "author=$AUTHOR" >> "$GITHUB_OUTPUT"
+
+            jq -n \
+              --arg quote "$QUOTE_TEXT" \
+              --arg author "$AUTHOR_TEXT" \
+              '[{quote: $quote, author: $author}]' > quotes.json
+            echo "✅ quotes.json updated successfully"
             exit 0
           done
 
           echo "❌ All $MAX_RETRIES attempts failed. Aborting."
           exit 1
-
-      - name: ✏️ Update README quote
-        run: |
-          QUOTE="${{ steps.quote.outputs.quote }}"
-          AUTHOR="${{ steps.quote.outputs.author }}"
-          NEW_IMG="  <img src=\"https://quotes-github-readme.vercel.app/api?type=horizontal&theme=nord&quote=${QUOTE}&author=${AUTHOR}\" alt=\"Quote of the day\" />"
-          awk -v new_img="$NEW_IMG" '/alt="Quote of the day"/{print new_img; next} {print}' README.md > README.tmp && mv README.tmp README.md
-          echo "✅ README updated successfully"
 
       - name: 🚀 Commit & push changes
         run: |
@@ -88,7 +80,7 @@ jobs:
             echo "ℹ️ No changes to commit"
             exit 0
           fi
-          git add README.md
+          git add quotes.json
           git commit -m "🤖 Update quote [skip ci]"
           git push
           echo "✅ Changes pushed successfully"

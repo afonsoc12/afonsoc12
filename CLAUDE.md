@@ -22,12 +22,14 @@
   - Make sure to link badges to the provder, e.g., clicking on AWS badge should navigate to https://aws.amazon.com
 
 ## Daily Quote
-- Quote card service: `https://quotes-github-readme.vercel.app/api`
-- Current URL params: `?type=horizontal&theme=nord&quote=<encoded>&author=<encoded>`
+- Quote card service: `https://github-readme-quotes-bay.vercel.app/quote`
+- Repository: `https://github.com/zhravan/github-readme-quotes`
+- Current URL params: `?quotesUrl=<raw_quotes_json_url>&theme=nord`
+- Current README URL: `https://github-readme-quotes-bay.vercel.app/quote?quotesUrl=https://raw.githubusercontent.com/afonsoc12/afonsoc12/refs/heads/master/quotes.json&theme=nord`
 - Quote is rendered between `<!-- QUOTE -->` and `<!-- END_QUOTE -->` markers in README.md.
 - Updated daily at midnight UTC by `.github/workflows/update-quote.yml`.
 - Quote source API: `https://zenquotes.io/api/random` (returns single-item array `[{q, a}]`).
-- URL encoding done via `jq`'s `@uri` filter in the workflow shell script.
+- Workflow writes `quotes.json` with one element only: `[{"quote":"...","author":"..."}]`.
 - Workflow also triggers on push to `develop` branch for testing.
 - Workflow has 3 retries with 30s delay; logs HTTP codes, errors, quote text and author.
 

@@ -10,7 +10,7 @@
 
 <!-- QUOTE -->
 <p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=nord&quote=What%20you%20get%20by%20achieving%20your%20goals%20is%20not%20as%20important%20as%20what%20you%20become%20by%20achieving%20your%20goals.&author=Henry%20David%20Thoreau" alt="Quote of the day" />
+	<img src="https://github-readme-quotes-bay.vercel.app/quote?quotesUrl=https://raw.githubusercontent.com/afonsoc12/afonsoc12/refs/heads/master/quotes.json&theme=nord" alt="Quote of the day" />
 </p>
 <!-- END_QUOTE -->
 
