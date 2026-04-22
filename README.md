@@ -10,7 +10,7 @@
 
 <!-- QUOTE -->
 <p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=nord&quote=If%20you%20cannot%20understand%20something%2C%20then%20you%20have%20understood%20it%20incorrectly.&author=Kabir" alt="Quote of the day" />
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=nord&quote=What%20you%20get%20by%20achieving%20your%20goals%20is%20not%20as%20important%20as%20what%20you%20become%20by%20achieving%20your%20goals.&author=Henry%20David%20Thoreau" alt="Quote of the day" />
 </p>
 <!-- END_QUOTE -->
 
