@@ -10,7 +10,7 @@
 
 <!-- QUOTE -->
 <p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=nord&quote=This%20is%20a%20test&author=Test%20author" alt="Quote of the day" />
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=nord&quote=If%20you%20cannot%20understand%20something%2C%20then%20you%20have%20understood%20it%20incorrectly.&author=Kabir" alt="Quote of the day" />
 </p>
 <!-- END_QUOTE -->
 
