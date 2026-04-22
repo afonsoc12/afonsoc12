@@ -1,0 +1,86 @@
+---
+name: Update Daily Quote
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+    branches:
+      - develop
+
+jobs:
+  update-quote:
+    name: Update quote
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v6
+
+      - name: 🌐 Fetch quote
+        run: |
+          MAX_RETRIES=3
+          RETRY_DELAY=30
+
+          for attempt in $(seq 1 $MAX_RETRIES); do
+            echo "🔄 Attempt $attempt/$MAX_RETRIES..."
+
+            HTTP_CODE=$(curl -s -o /tmp/quotes.json -w "%{http_code}" "https://zenquotes.io/api/random")
+            CURL_EXIT=$?
+
+            if [[ $CURL_EXIT -ne 0 ]]; then
+              echo "❌ curl failed with exit code $CURL_EXIT"
+              echo "⏳ Retrying in ${RETRY_DELAY}s..."
+              sleep $RETRY_DELAY
+              continue
+            fi
+
+            if [[ "$HTTP_CODE" != "200" ]]; then
+              echo "❌ API error — HTTP $HTTP_CODE"
+              echo "📄 Response body: $(cat /tmp/quotes.json)"
+              echo "⏳ Retrying in ${RETRY_DELAY}s..."
+              sleep $RETRY_DELAY
+              continue
+            fi
+
+            echo "✅ API responded with HTTP $HTTP_CODE"
+
+            QUOTE_TEXT=$(jq -r '.[0].q' /tmp/quotes.json)
+            AUTHOR_TEXT=$(jq -r '.[0].a' /tmp/quotes.json)
+
+            if [[ -z "$QUOTE_TEXT" || "$QUOTE_TEXT" == "null" ]]; then
+              echo "❌ Failed to parse JSON response"
+              echo "📄 Body: $(cat /tmp/quotes.json)"
+              echo "⏳ Retrying in ${RETRY_DELAY}s..."
+              sleep $RETRY_DELAY
+              continue
+            fi
+
+            echo "💬 Quote: \"$QUOTE_TEXT\""
+            echo "👤 Author: $AUTHOR_TEXT"
+
+            jq -n \
+              --arg quote "$QUOTE_TEXT" \
+              --arg author "$AUTHOR_TEXT" \
+              '[{quote: $quote, author: $author}]' > quotes.json
+            echo "✅ quotes.json updated successfully"
+            exit 0
+          done
+
+          echo "❌ All $MAX_RETRIES attempts failed. Aborting."
+          exit 1
+
+      - name: 🚀 Commit & push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "ℹ️ No changes to commit"
+            exit 0
+          fi
+          git add quotes.json
+          git commit -m "🤖 Updated quotes.json [skip ci]"
+          git push
+          echo "✅ Changes pushed successfully"
