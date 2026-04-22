@@ -10,7 +10,7 @@
 
 <!-- QUOTE -->
 <p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=nord&quote=This%20is%20a%20test&author=Test%20author" alt="Quote of the day" />theme=nord  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=nord&quote=This%20is%20a%20test&author=Test%20author" alt="Quote of the day" />quote=A%20tiger%20doesn%27t%20lose%20sleep%20over%20the%20opinion%20of%20sheep.  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=nord&quote=This%20is%20a%20test&author=Test%20author" alt="Quote of the day" />author=Shahir%20Zag" alt="Quote of the day" />
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=nord&quote=This%20is%20a%20test&author=Test%20author" alt="Quote of the day" />
 </p>
 <!-- END_QUOTE -->
 

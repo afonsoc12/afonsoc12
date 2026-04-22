@@ -77,7 +77,7 @@ jobs:
           QUOTE="${{ steps.quote.outputs.quote }}"
           AUTHOR="${{ steps.quote.outputs.author }}"
           NEW_IMG="  <img src=\"https://quotes-github-readme.vercel.app/api?type=horizontal&theme=nord&quote=${QUOTE}&author=${AUTHOR}\" alt=\"Quote of the day\" />"
-          sed -i 's|.*alt=\"Quote of the day\".*|'"$NEW_IMG"'|' README.md
+          awk -v new_img="$NEW_IMG" '/alt="Quote of the day"/{print new_img; next} {print}' README.md > README.tmp && mv README.tmp README.md
           echo "✅ README updated successfully"
 
       - name: 🚀 Commit & push changes
