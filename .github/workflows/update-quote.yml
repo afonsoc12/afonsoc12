@@ -10,7 +10,7 @@ on:
 
 jobs:
   update-quote:
-    name: Update Quote
+    name: Update quote
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -81,6 +81,6 @@ jobs:
             exit 0
           fi
           git add quotes.json
-          git commit -m "🤖 Update quote [skip ci]"
+          git commit -m "🤖 Updated quotes.json [skip ci]"
           git push
           echo "✅ Changes pushed successfully"
